@@ -23,14 +23,6 @@ Make the font larger too.*/
 		color: darkblue;
 	}
 	
-	/*Style the images*/
-	/* img{
-		height: 400px;
-		width:auto;
-		padding: 25px;
-		border-radius: 10px;
-		margin: 30px;
-	} */
 	
 	/*Make the h2 heading match h1*/
 	h2{
@@ -64,10 +56,7 @@ Make the font larger too.*/
 		  grid-row-gap: 15px;
 	  }
 	.intern-logos > img{
-		/* display: grid; */
 		grid-column: 1/-1;
-		/* grid-template-columns: min-content;
-		grid-template-rows: align-items; */
 		border: 5px #50C7C7 solid;
 		max-height: 100%;
 		max-width: 100%;
@@ -77,40 +66,14 @@ Make the font larger too.*/
 	  .proj-pics > img{
 		display: grid;
 		grid-column: 2/-1;
-		grid-row: 2 / span 1
+		grid-row: 2 / span 1;
 		border: 5px #50C7C7 solid;
 		max-height: 100%;
 		max-width: 100%;
 		justify-content: center;
 	  }
 
-	  /* .proj-image{
-		grid-column: 1/-1;
-		max-height: 700px;
-		overflow: hidden;
-		grid-row: 2 / span 1;
-	  }
-	  
-	  .about{
-		grid-column: 2 / span 1;
-		grid-row: 2 / span 1;
-	  }
-	  
-	  .method-image{
-		max-height: 700px;
-		grid-column: 1/-1;
-		overflow: hidden;
-		grid-row: 3 / span 1;
-	  }
-	  
-	  .method{
-		grid-column: 2 / span 1;
-		grid-row: 3 / span 1;
-	  } */
 
-	  .covid-challenge{
-		  display: all;
-	  }
 	
 	
 	.resume-image > img{
@@ -214,5 +177,8 @@ Make the font larger too.*/
 	padding: 25px 25px;
 	text-align:center;
   }
+  
+
+
 
 
