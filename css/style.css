@@ -6,11 +6,18 @@ body{
 	font-size:150%;
 }
 
+footer{
+	background-color: rgb(120, 120, 180);
+}
+a{
+	color: darkblue
+}
 
 /*Make the h1 heading bigger with a bold font*/
 h1{
 	font-size: 2em; 
 	font-weight: bold;
+	color: darkblue;
 }
 
 /*Style the images*/
@@ -47,7 +54,80 @@ header, nav, main, h1, footer{
   display: flex;
   justify-content: center;
 }
+.container{
+    display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+  	grid-template-rows: auto auto auto auto auto;
+  	grid-row-gap: 15px;
+  }
+.intern-logos > img{
+	/* display: grid; */
+	grid-column: 1/-1;
+	/* grid-template-columns: min-content;
+	grid-template-rows: align-items; */
+	border: 5px #50C7C7 solid;
+	max-height: 100%;
+	max-width: 100%;
+	justify-content: center;
+  }
 
+
+.resume-image > img{
+	border: 5px #50C7C7 solid;
+	margin: auto;
+	width: auto;
+	display: flex;
+	justify-content: center;
+  }
+
+  .bottom-images > img{
+	margin: 25px;
+	/* margin-left: 30px; */
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	/* display: block; */
+	max-height: 20%;
+	justify-content: center;
+	max-width: 20%;
+  }
+
+.skip a{
+	color: #123C69;
+	height: 32px;
+	left:75%;
+	display: flex;
+	position: absolute;
+	transform: translateY(-100%);
+	transition: transform 0.3s;
+	}
+	
+	nav{
+		background-color: white;
+		text-align: center;
+	  }
+
+	  .nav_item a{
+		color: black;
+		text-decoration: none;
+	  }
+	  
+	  .nav_item a:hover, a:focus{
+		color: #123C69;
+		text-decoration: underline;
+		-webkit-text-decoration-style: dashed;
+				text-decoration-style: dashed;
+	  }
+
+	  /*need to add something so it's clear which page we are on*/
+	.current_item a{
+		background-color: #50C7C7;
+		box-shadow: 1px 1px 1px 1px #ccc;
+		color: white;
+		text-transform: uppercase;
+		font-size: 24px;
+	  
+	  }
 /*Change the styling for all of the list 
 items in the nav section*/
 nav li{
@@ -59,9 +139,10 @@ nav li{
 	width: 20%;
 }
 
-/*need to add something so it's clear which page we are on*/
-a:visited{color:#f700ff}
-a:before{color: #f700ff}
-a:after{color: aqua}
+/* social links */
+.linkedin a{
+	color: #AC3B61
+}
+
 
 
