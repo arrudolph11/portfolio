@@ -71,7 +71,7 @@ body{
 	.resume-image > img{
 		border: 5px #50C7C7 solid;
 		margin: auto;
-		width: 290 px;
+		width: min-content;
 		display: block;
 		justify-content: center;
 	  }
