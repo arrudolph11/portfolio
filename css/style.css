@@ -1,10 +1,5 @@
-/*Add padding and margin to space out the page.
-Make the font larger too.*/
-
-
-
-	body{
-		margin:1%;
+body{
+		margin:0%;
 		padding:1%;
 		font-size:150%;
 	}
@@ -31,7 +26,7 @@ Make the font larger too.*/
 	}
 	
 	/*Improve the spacing for paragraphs AND headings*/
-	p, h1, h2 {
+	h1, h2 {
 		padding: 10px;
 	}
 	
@@ -39,7 +34,7 @@ Make the font larger too.*/
 	space too*/
 	header, nav, main, h1, footer{
 		border: 2px solid grey;
-		margin: 10px 0;
+		margin: 20px 0;
 	}
 	
 	.headshot-image > img{
@@ -72,15 +67,12 @@ Make the font larger too.*/
 		max-width: 100%;
 		justify-content: center;
 	  }
-
-
-	
 	
 	.resume-image > img{
 		border: 5px #50C7C7 solid;
 		margin: auto;
-		width: auto;
-		display: flex;
+		width: 290 px;
+		display: block;
 		justify-content: center;
 	  }
 	
@@ -104,11 +96,13 @@ Make the font larger too.*/
 		position: absolute;
 		transform: translateY(-100%);
 		transition: transform 0.3s;
-		}
+	    }
+	
 		
 		nav{
 			background-color: white;
 			text-align: center;
+			/* padding: 7px; */
 		  }
 	
 		  .nav_item a{
@@ -128,49 +122,45 @@ Make the font larger too.*/
 			background-color: #50C7C7;
 			box-shadow: 1px 1px 1px 1px #ccc;
 			color: white;
-			text-transform: uppercase;
+			text-transform: bold;
 			font-size: 24px;
 		  
 		  }
 	/*Change the styling for all of the list 
 	items in the nav section*/
 	nav li{
-		background-color: #cdcfd4;
-		padding:10px;
-		width:25%;
+		padding:0px;
 		margin: auto;
+		background-color: aqua;
 		border:1px solid black;
-		display: inline-flex;
-		width: 20%;
+		display: block;
+		/* width: 20%; */
 	}
 
 	nav ul{
 		display: inline-flex;
 	}
 
-	/* GRID STYLES BELOW */
+/* THESE GRID STYLES ARE FOR THE MOBILE VIEW ONLY  */
 
 .wrapper {
 	display: grid;
 	grid-template-columns: auto auto auto;
 	grid-template-columns: auto auto auto;
-	grid-template-columns: repeat(3, 300px); 
+	justify-content: space-around;
+	grid-template-columns: repeat(2, 200px); 
   /*   grid-template-columns: 1fr 1fr 1fr 1fr;  */
-  /*   grid-template-columns: 1fr 2fr 1fr;  */
-   
-
-	
-	
+  /*   grid-template-columns: 1fr 2fr 1fr;  */	
   }
-  
+
   .box:nth-child(odd){
 	background-color: rgb(63, 106, 224);
-	border: 3px solid black;
+	border: 1Px solid black;
   }
   .box:nth-child(even){
 	background-color:rgb(121, 150, 247);
 	color:white;
-	border: 3px solid black;
+	border: 1px solid black;
   }
   .box {
 	font-size: 100%;
@@ -178,6 +168,8 @@ Make the font larger too.*/
 	text-align:center;
   }
   
+
+
 
 
 
