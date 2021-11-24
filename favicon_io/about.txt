@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Sans Adlam
+- Font Author: Copyright 2017-2019 Google LLC. All Rights Reserved.
+- Font Source: http://fonts.gstatic.com/s/notosansadlam/v10/neIczCCpqp0s5pPusPamd81eMfjPonvqdbYxxpgufnv0TGnBZLwhuvk.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
