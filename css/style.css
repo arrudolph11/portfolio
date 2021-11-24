@@ -2,7 +2,8 @@ body{
 		margin:0%;
 		padding:1%;
 		font-size:150%;
-		width:fit-content;
+		background-color: rgb(195, 195, 241);
+		width: fit-content;
 	}
 	
 	footer{
@@ -16,13 +17,15 @@ body{
 	h1{
 		font-size: 2em; 
 		font-weight: bold;
-		color: darkblue;
+		color: rgb(253, 253, 255);
+		background-color: cadetblue;
 	}
 	
 	
 	/*Make the h2 heading match h1*/
 	h2{
 		font-size: 2em; 
+		background-color: rgb(253, 253, 255);
 		font-weight: bold;
 	}
 	
@@ -33,11 +36,12 @@ body{
 	
 	/*Add borders around the main components and some
 	space too*/
-	header, nav, main, h1, footer{
+	header, main, h1, footer, nav{
 		border: 2px solid grey;
 		margin: 20px 0;
 	}
-	
+
+
 	.headshot-image > img{
 	  border: 5px #50C7C7 solid;
 	  margin: auto;
@@ -51,20 +55,46 @@ body{
 		  grid-template-rows: auto auto auto auto auto;
 		  grid-row-gap: 15px;
 	  }
-	.intern-logos > img{
-		grid-column: 1/-1;
-		border: 5px #50C7C7 solid;
-		max-height: 100%;
-		max-width: 100%;
+	.intern-logos{
+		display: grid;
+		object-fit: cover;
+		justify-content: space-around;
+		align-self: auto;
+		/* grid-template-rows: repeat(4, 50px);  */
+	  	grid-template-rows: repeat(2, 100px); 
 		justify-content: center;
+		grid-template-columns: repeat(2, 200px); 
 	  }
 
+	  .internimg{
+		  max-width: 100px;
+		  max-height: 100px;
+		  position: absolute;
+		  justify-content: center;
+		  
+	  }
+
+	.horizon-logo > img{
+		grid-column: 1/-1;
+		border: 5px #50C7C7 solid;
+		max-height: 45%;
+		align-content: center;
+		max-width: 45%;	
+	}
+
+	/* .myfavicon {
+	max-width: 2%;
+	max-height: 2%;
+	align-content: flex-end;
+	} */
+
+	 
+
 	  .proj-pics > img{
-		display: grid;
-		grid-column: 2/-1;
-		grid-row: 2 / span 1;
+		display:block;
 		border: 5px #50C7C7 solid;
 		max-height: 100%;
+		margin: auto;
 		max-width: 100%;
 		justify-content: center;
 	  }
@@ -78,30 +108,34 @@ body{
 	  }
 	
 	  .bottom-images > img{
-		margin: 25px;
-		/* margin-left: 30px; */
+		margin: 12px;
 		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		/* display: block; */
-		max-height: 20%;
+		/* margin-left: auto;
+		margin-right: auto; */
+		max-height: 10%;
 		justify-content: center;
-		max-width: 20%;
+		max-width: 10%;
 	  }
 	
 	.skip a{
 		color: #123C69;
-		height: 32px;
-		left:75%;
-		display: flex;
+		background: white;
+		left: 0;
+		padding: 7px;
+		-webkit-transition: top 1s ease-out;
+		transition: top 1s ease-out;
+		z-index: 1;
 		position: absolute;
-		transform: translateY(-100%);
-		transition: transform 0.3s;
-	    }
+		top: -50px;
+		}
+	.skip a:focus{
+		position: absolute;
+		top: 10px;
+		}
 	
 		
 		nav{
-			background-color: white;
+			background-color: rgb(120, 129, 185);
 			text-align: center;
 			/* padding: 7px; */
 		  }
@@ -122,8 +156,8 @@ body{
 		.current_item a{
 			background-color: #50C7C7;
 			box-shadow: 1px 1px 1px 1px #ccc;
-			color: white;
-			text-transform: bold;
+			color:black;
+			text-transform: uppercase;
 			font-size: 24px;
 		  
 		  }
@@ -132,7 +166,7 @@ body{
 	nav li{
 		padding:0px;
 		margin: auto;
-		background-color: aqua;
+		background-color:cadetblue;
 		border:1px solid black;
 		display: block;
 		/* width: 20%; */
@@ -146,8 +180,7 @@ body{
 
 .wrapper {
 	display: grid;
-	grid-template-columns: auto auto auto;
-	grid-template-columns: auto auto auto;
+	/* grid-template-columns: auto auto auto; */
 	justify-content: space-around;
 	grid-template-columns: repeat(2, 200px); 
   /*   grid-template-columns: 1fr 1fr 1fr 1fr;  */
@@ -155,13 +188,15 @@ body{
   }
 
   .box:nth-child(odd){
-	background-color: rgb(63, 106, 224);
+	background-color: cadetblue;
 	border: 1Px solid black;
+	font-weight: bold;
+
   }
   .box:nth-child(even){
-	background-color:rgb(121, 150, 247);
-	color:white;
+	background-color:cadetblue;
 	border: 1px solid black;
+	font-weight: bold;
   }
   .box {
 	font-size: 100%;
@@ -169,9 +204,64 @@ body{
 	text-align:center;
   }
   
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	.wrapper {
+		display: grid;
+		bottom: 80px;
+		width: 100%;
+		justify-content: space-around;
+		grid-template-columns: repeat(2, 400px); 
+	  }
 
+	footer{
+		bottom: 30px;
+		width: 100%;
+		position: static;
+	}
 
+	.intern-logos{
+		display: grid;
+		object-fit: cover;
+		justify-content: space-around;
+		align-self: auto;
+		/* grid-template-rows: repeat(4, 50px);  */
+	  	grid-template-columns: repeat(4, 200px); 
+		justify-content: center;
+	  }
 
+	  .internimg{
+		  max-width: 150px;
+		  max-height: 150px;
+		  position: absolute;
+		  justify-content: center;
+		  
+	  }
 
+  }
+/** Code for prefers reduced motion **/
+/* Make no changes below this line.
+   *************************************** 
+   */
+   @media screen and (prefers-reduced-motion: reduce){
+	/*Turn off scroll*/
+	html{
+		scroll-behavior: auto; /* Removes scroll animation */
+	}
+  
+	/*Turn off transition*/
+	/* .skip a{
+	  -webkit-transition: initial; 
+	  transition: initial; 
+	} */
+
+  
+	/*Turn off parallax*/
+	header{
+	  background-attachment: initial;
+	}
+  }
+
+  
 
 
