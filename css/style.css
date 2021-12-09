@@ -3,7 +3,7 @@ body{
 		padding:1%;
 		font-size:150%;
 		background-color: rgb(195, 195, 241);
-		width: fit-content;
+		width: auto;
 	}
 	
 	footer{
@@ -13,7 +13,6 @@ body{
 		color: darkblue
 	}
 	
-	/*Make the h1 heading bigger with a bold font*/
 	h1{
 		font-size: 2em; 
 		font-weight: bold;
@@ -21,26 +20,20 @@ body{
 		background-color: cadetblue;
 	}
 	
-	
-	/*Make the h2 heading match h1*/
 	h2{
 		font-size: 2em; 
 		background-color: rgb(253, 253, 255);
 		font-weight: bold;
 	}
 	
-	/*Improve the spacing for paragraphs AND headings*/
 	h1, h2 {
 		padding: 10px;
 	}
 	
-	/*Add borders around the main components and some
-	space too*/
 	header, main, h1, footer, nav{
 		border: 2px solid grey;
 		margin: 20px 0;
 	}
-
 
 	.headshot-image > img{
 	  border: 5px #50C7C7 solid;
@@ -60,18 +53,19 @@ body{
 		object-fit: cover;
 		justify-content: space-around;
 		align-self: auto;
-		/* grid-template-rows: repeat(4, 50px);  */
-	  	grid-template-rows: repeat(2, 100px); 
+	  	grid-template-rows: repeat(1, 100px); 
 		justify-content: center;
 		grid-template-columns: repeat(2, 200px); 
 	  }
 
+	.mobile-text{
+		display: visible;
+	}
 	  .internimg{
 		  max-width: 100px;
 		  max-height: 100px;
 		  position: absolute;
-		  justify-content: center;
-		  
+		  justify-content: center;	  
 	  }
 
 	.horizon-logo > img{
@@ -81,14 +75,6 @@ body{
 		align-content: center;
 		max-width: 45%;	
 	}
-
-	/* .myfavicon {
-	max-width: 2%;
-	max-height: 2%;
-	align-content: flex-end;
-	} */
-
-	 
 
 	  .proj-pics > img{
 		display:block;
@@ -102,20 +88,25 @@ body{
 	.resume-image > img{
 		border: 5px #50C7C7 solid;
 		margin: auto;
-		width: min-content;
-		display: block;
-		justify-content: center;
+		width: 300px;
+		display: flex;
+		/* justify-content: center;
+		text-align: center; */
 	  }
 	
 	  .bottom-images > img{
 		margin: 12px;
 		text-align: center;
-		/* margin-left: auto;
-		margin-right: auto; */
 		max-height: 10%;
 		justify-content: center;
 		max-width: 10%;
 	  }
+
+	.askme-image > img{
+		margin: auto;
+		width: auto;
+		display: flex;
+	}
 	
 	.skip a{
 		color: #123C69;
@@ -137,7 +128,6 @@ body{
 		nav{
 			background-color: rgb(120, 129, 185);
 			text-align: center;
-			/* padding: 7px; */
 		  }
 	
 		  .nav_item a{
@@ -151,8 +141,7 @@ body{
 			-webkit-text-decoration-style: dashed;
 			text-decoration-style: dashed;
 		  }
-	
-		  /*need to add something so it's clear which page we are on*/
+
 		.current_item a{
 			background-color: #50C7C7;
 			box-shadow: 1px 1px 1px 1px #ccc;
@@ -161,30 +150,33 @@ body{
 			font-size: 24px;
 		  
 		  }
-	/*Change the styling for all of the list 
-	items in the nav section*/
+
 	nav li{
 		padding:0px;
 		margin: auto;
 		background-color:cadetblue;
 		border:1px solid black;
 		display: block;
-		/* width: 20%; */
 	}
 
 	nav ul{
-		display: inline-flex;
+		display: flex;
 	}
+/* 
+Your code here. making animation */
+	#logo{
+	   animation-name: bounceIn;
+	   animation-duration: 8s;
+	   animation-iteration-count: 1;
+	   margin: inherit;
+	 }
 
 /* THESE GRID STYLES ARE FOR THE MOBILE VIEW ONLY  */
 
 .wrapper {
 	display: grid;
-	/* grid-template-columns: auto auto auto; */
 	justify-content: space-around;
 	grid-template-columns: repeat(2, 200px); 
-  /*   grid-template-columns: 1fr 1fr 1fr 1fr;  */
-  /*   grid-template-columns: 1fr 2fr 1fr;  */	
   }
 
   .box:nth-child(odd){
@@ -203,9 +195,97 @@ body{
 	padding: 25px 25px;
 	text-align:center;
   }
+
+  /* CAROUSEL CODE */
+  .carousel {
+	  position: relative;
+	  height: 600px;
+	  width: 80%;
+	  margin: 0 auto;
+  }
+
+  .carousel_images{
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+  }
+
+  .carousel_track_container{
+	  background: lightblue;
+	  height: 100%;
+	  position: relative;
+	  overflow: hidden;
+  }
+
+  .carousel_track{
+	  padding: 0;
+	  margin: 0;
+	  list-style: none;
+	  position: relative;
+	  height: 100%;
+	  transition: transform 250ms ease-in;
+  }
   
+  .carousel_slide{
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  width: 100%;
+  }
+
+  .carousel_button{
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  background: transparent;
+	  border: 0;
+	  cursor: pointer;
+  }
+
+  .carousel_button img{
+	width: 12px;
+  }
+
+  .carousel_button--left{
+	  left: -40px;
+  }
+
+  .carousel_button--right{
+	  right: -40px;
+  }
+
+  .carousel_nav{
+	  /* background: pink; */
+	  display: flex;
+	  justify-content: center;
+	  padding: 10px 0;
+  }
+
+  .carousel_indicator{
+	  border: 0;
+	  border-radius: 50%;
+	  width: 15px;
+	  height: 15px;
+	  background:rgb(0,0,0,0.3);
+	  margin: 0 12px;
+	  cursor: pointer;
+  }
+
+  .carousel_indicator.current-slide{
+	  background: rgba(0,0,0,0.75);
+  }
+
+  .is-hidden{display: none;
+
+}
+
   @media only screen and (min-width: 600px) {
 	/* For tablets: */
+
+	.mobile-text{
+		display: none;
+	}
+
 	.wrapper {
 		display: grid;
 		bottom: 80px;
@@ -225,7 +305,7 @@ body{
 		object-fit: cover;
 		justify-content: space-around;
 		align-self: auto;
-		/* grid-template-rows: repeat(4, 50px);  */
+		grid-template-rows: repeat(4, 50px); 
 	  	grid-template-columns: repeat(4, 200px); 
 		justify-content: center;
 	  }
@@ -238,7 +318,105 @@ body{
 		  
 	  }
 
+	  .resume-image > img{
+		border: 5px #50C7C7 solid;
+		margin: auto;
+		width: auto;
+		display: block;
+		justify-content: center;
+	  }
+
+	  .flip-card {
+		background-color: transparent;
+		/* width: 300px; */
+		/* height: 200px; */
+		/* border: 1px solid #f1f1f1; */
+		perspective: 1000px; /* Remove this if you don't want the 3D effect */
+		border: 5px #50C7C7 solid;
+		margin: auto;
+		width: auto;
+		justify-content: center;
+	  }
+	  
+	  
+	  /* This container is needed to position the front and back side */
+	  .flip-card-inner {
+	border: 5px #50C7C7 solid;
+		margin: auto;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		transition: transform 0.8s;
+		transform-style: preserve-3d;
+	  }
+	  
+	  /* Do an horizontal flip when you move the mouse over the flip box container */
+	  .flip-card:hover .flip-card-inner {
+		transform: rotateY(180deg);
+	  }
+	  
+	  /* Position the front and back side */
+	  .flip-card-front, .flip-card-back {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden; /* Safari */
+		backface-visibility: hidden;
+	  }
+	  
+	  /* Style the front side (fallback if image is missing) */
+	  .flip-card-front {
+		border: 5px #50C7C7 solid;
+		margin: auto;
+		width: auto;
+		display: flex;
+		justify-content: center;
+	  }
+	  
+	  /* Style the back side */
+	  .flip-card-back {
+		border: 5px #50C7C7 solid;
+		margin: auto;
+		width: auto;
+		display: flex;
+		justify-content: center;
+		transform: rotateY(180deg);
+	  }
+
+
+	  .parallax {
+		/* The image used */
+		background-image: url("images/waves.jpeg");
+	  
+		/* Full height */
+		height: 100%;
+	  
+		/* Create the parallax scrolling effect */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	  }
+
   }
+
+  @media only screen and (min-width: 1000px) {
+	  /* For laptops */
+
+	  .wrapper {
+		display: grid;
+		justify-content: space-around;
+		width: 100%;
+		grid-template-columns: repeat(2, 700px); 
+	  }
+
+	  .mobile-text{
+		display: none;
+	}
+
+  }
+
+
 /** Code for prefers reduced motion **/
 /* Make no changes below this line.
    *************************************** 
@@ -248,19 +426,49 @@ body{
 	html{
 		scroll-behavior: auto; /* Removes scroll animation */
 	}
-  
-	/*Turn off transition*/
-	/* .skip a{
-	  -webkit-transition: initial; 
-	  transition: initial; 
-	} */
 
+	#logo{
+		animation: none;
+	  }
+	  .flip-card:active .flip-card-inner {
+	   transform: None;
+	 }
   
 	/*Turn off parallax*/
 	header{
 	  background-attachment: initial;
 	}
   }
+
+/* 
+  animation */
+  @-webkit-keyframes bounceIn{
+	from{ 
+	  width: 25px;
+	  opacity: 0;
+	}
+	to{
+	  width: 150px;
+	  opacity: 1;
+	}
+	/*Your code here.*/
+  
+  }
+  
+  @keyframes bounceIn{
+	/*Your code here.*/
+	from{
+	  width: 25px;
+	  opacity: 0;
+	}
+	to{
+	  width: 150px;
+	  opacity: 1;
+	}
+  } 
+  
+
+
 
   
 
