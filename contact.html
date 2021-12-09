@@ -9,6 +9,7 @@
 	<link rel="manifest" href="/site.webmanifest">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<title>Contact Me</title>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5KZ28LRMHN"></script>
 	<script>
   	window.dataLayer = window.dataLayer || [];
@@ -16,7 +17,6 @@
   	gtag('js', new Date());
   	gtag('config', 'G-5KZ28LRMHN');
 	</script>
-	<title>Contact Me</title>
 </head>
 <body>
 
@@ -31,23 +31,42 @@
 			</ul>
 		</nav>
 		<h1>Contact Me!</h1>
-
+	
 	</header>
-
 	<main id="maincontent">
-		<p>Fill out the form if you have any questions about me, my experiences, internships, or anything at all! I will get back to you as soon as I can.<br><br></p>
-        <form
+		<div class="flip-card">
+			<div class="flip-card-inner">
+			  <div class="flip-card-front">
+				<img src="images/askme.png" alt="askme" style="width:300px;height:300px;">
+			  </div>
+			  <div class="flip-card-back">
+				<img src="images/picrocks.JPG" alt="picrocks" style="width:300px;height:300px;">
+			  </div>
+			</div>
+		  </div>
+		<div class='parallax'></div>
+		<p class="mobile-text">Fill out the form if you have any questions about me, my experiences, internships, or anything at all! I will get back to you as soon as I can.<br><br></p>
+		
+			<form
 		action = "https://formspree.io/f/mbjqnnkv"
 		method="POST"
 		>
 			<label for="fname">Name:</label><br>
 			<input type="text" id="fname" name="fname"><br>
+			<br>
 			<label for="Message">Write a Message:</label><br>
-			<input type="text" id="Message" name="Message"><br>
+			<textarea name="textarea" rows="5" cols="40">Write something here</textarea>
+			<br>
 			<input type="submit" id="submit" name="submit" value="Submit">
 			<br><br>
-			<img src="images/askme.png" alt="askme"/>
 		</form>
+		
+	
+		<!-- <div class="askme-image">
+			<img src="images/askme.png" alt="askme"/>
+
+		</div> -->
+
         <div class="wrapper">
         	<div class="box a">(847)-691-0750</div>
             <div class="box b">arrud @ umich.edu</div>
@@ -57,8 +76,10 @@
 			<div class="box b">amanda rudolph3 @gmail.com</div>
         </div>
 		<p>Please see my contact information above if you would like to contact me in the future. </p>
-		<p><br>*From January 2022-May 2022 I will be studying abroad and not reachable by phone, so please reach me by filling out the form above or sending me an email.</p>
 		
+		<img src = "images/favicon.ico" width = "120" alt="logo" id = "logo">
+		<p><br>*From January 2022-May 2022 I will be studying abroad and not reachable by phone, so please reach me by filling out the form above or sending me an email.</p>
+		<div class='parallax'></div>
 	</main>
 
 	<footer>
